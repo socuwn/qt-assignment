@@ -1,4 +1,4 @@
-# Task
+# Assignment
 An interactive morse converter that can convert English letters to morse code;
 the user can type either, and gets the converted text displayed in real time;
 
@@ -6,8 +6,14 @@ this can be a tool with a widget- or QML-based user interface,
 or a console application.
 
 
-# Specification
+# Dependencies
+This project is a simple Qt Widgets Application made from a default template using 
+[Qt Creator](https://www.qt.io/download-dev)
 
+To get started simply open this project in Qt Creator and build.
+
+
+# Specification
 ## General
 Upper and lower case characters should be interchangeable.
 Characters in the ASCII table with decimal values equal to and in the range of
