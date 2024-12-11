@@ -36,9 +36,13 @@ Ignore invalid or unsupported characters.
 
 ### (OPTIONAL) live / legacy morse
 Any key is stored as a signal with time on into a buffer.
+
 When a sequence is recognized store into the parsed buffer.
 
+Use multiple progress bars as a tempo indicator (dit, dah, eoc, eow).
+
 Ignore invalid or unsupported characters.
+
 
 
 ## outputs
@@ -62,7 +66,7 @@ Use TTS
 ## Morse code
 https://en.wikipedia.org/wiki/Morse_code
 
-Five elements of morse code:
+### Five elements of morse code
 1. short mark, dot or dit: one time unit long
 2. long mark, dash or dah: three time units long
 3. inter-element gap between the dits and dahs within a character:
@@ -73,23 +77,27 @@ Five elements of morse code:
 
 # Design details
 ## Types
-------------------------------------------------
-name | length | description
-------------------------------------------------
-dit  |      1 | short mark
-dah  |      3 | long mark
-gp1  |      1 | gap between marks (within a character)
-gp3  |      3 | gap between letters
-gp5  |      5 | gap between words
-gp7  |      7 | gap between words
+
+| name | length | description                            |
+|------|--------|----------------------------------------|
+| dit  |      1 | short mark                             |
+| dah  |      3 | long mark                              |
+| gp1  |      1 | gap between marks (within a character) |
+| gp3  |      3 | gap between letters                    |
+| gp5  |      5 | gap between words                      |
+| gp7  |      7 | gap between words                      |
 
 
 ## Timing
 words per minute can be determined by the word PARIS or CODEX
+
 PARIS consists of 50 dit units, @ 20 words per minute => 1 dit = 60ms
+
 CODEX consists of 60 dit units, @ 20 words per minute => 1 dit = 50ms
 
+
 T: 1 dit
+
 W: words per minute
 
 PARIS:
@@ -106,14 +114,14 @@ Optional:
 
 ## Other
 
-FunFact anecdote:
-"He is in the garb of a kwaker"
-"He is in the garb of a quaker"
+### FunFact anecdote
+[John Tawell](https://en.wikipedia.org/wiki/John_Tawell)
+"He is in the garb of a kwaker" -> "He is in the garb of a quaker"
 
-Max length:
+### Max length
+```
 0 - dah dah dah dah dah dah
    0111011101110111011101110
+```
 
 
-### Progress bar
-use multiple progress bars as a tempo indicator (dit, dah, eoc, eow)
